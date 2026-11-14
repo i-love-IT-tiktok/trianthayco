@@ -1,0 +1,1231 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#190b13">
+<title>Tri Ân | Vietnamese Teachers' Day 20/11</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #160a11;
+  --surface: #28121d;
+  --surface2: #351723;
+  --gold: #f5d58e;
+  --gold2: #c99b56;
+  --white: #fff4e8;
+  --muted: #c8aeb5;
+  --shadow: 0 18px 45px #0008, inset 0 1px 1px #ffffff16;
+  --radius: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* BACKGROUND */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 15% 15%, #70223855, transparent 35%),
+    radial-gradient(circle at 85% 65%, #9b5d3040, transparent 35%),
+    linear-gradient(145deg, #160a11, #28101b, #140810);
+}
+
+.ambient {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: #d9a34e;
+  opacity: .09;
+  filter: blur(100px);
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+  animation: ambient 8s infinite alternate;
+}
+
+.ambient.one {
+  top: 10%;
+  left: -100px;
+}
+
+.ambient.two {
+  right: -100px;
+  bottom: 10%;
+  animation-delay: 2s;
+}
+
+@keyframes ambient {
+  to {
+    transform: translate(40px, -50px) scale(1.3);
+  }
+}
+
+/* COMMON */
+
+.container {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+
+section {
+  padding: 90px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 5vw, 46px);
+  color: var(--gold);
+  margin-bottom: 13px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.panel {
+  background: linear-gradient(145deg, #ffffff0c, #ffffff04);
+  border: 1px solid #e6bd7950;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform .35s, box-shadow .35s, border-color .35s;
+}
+
+.panel:hover {
+  transform: translateY(-6px);
+  border-color: #f5d58eaa;
+  box-shadow: 0 25px 55px #0009, inset 0 1px 1px #ffffff25;
+}
+
+.gold-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 25px;
+  border: 1px solid var(--gold);
+  border-radius: 50px;
+  background: linear-gradient(135deg, #f5d58e, #c99b56);
+  color: #32121c;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 8px 25px #d7a75b30;
+}
+
+.gold-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 30px #d7a75b55;
+}
+
+.outline-btn {
+  background: #ffffff08;
+  color: var(--gold);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 850px;
+  animation: reveal 1.3s ease;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-label {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(70px, 16vw, 150px);
+  line-height: 1;
+  color: var(--gold);
+  text-shadow: 0 0 45px #f5d58e55;
+}
+
+.hero h1 span {
+  display: block;
+  font-size: .43em;
+  letter-spacing: 7px;
+  color: var(--white);
+  margin-top: 18px;
+}
+
+.hero-date {
+  margin: 32px 0;
+  letter-spacing: 4px;
+  color: #f0d5ae;
+  font-size: 14px;
+}
+
+.hero-line {
+  width: 110px;
+  height: 2px;
+  background: var(--gold);
+  margin: 25px auto;
+  box-shadow: 0 0 15px var(--gold);
+}
+
+.hero-desc {
+  max-width: 600px;
+  margin: auto;
+  color: #e8d2d4;
+  line-height: 2;
+  font-size: 15px;
+}
+
+.hero-actions {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 25px;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  animation: float 2s infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(8px); }
+}
+
+/* INTRO */
+
+.intro-card {
+  max-width: 850px;
+  margin: auto;
+  padding: 45px;
+  text-align: center;
+}
+
+.big-flower {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.intro-card h3 {
+  color: var(--gold);
+  font: 600 32px 'Playfair Display', serif;
+  margin-bottom: 22px;
+}
+
+.intro-card p {
+  line-height: 2.1;
+  color: #f0dce0;
+}
+
+/* VALUES */
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.value-card {
+  padding: 32px 25px;
+  text-align: center;
+  min-height: 225px;
+}
+
+.value-icon {
+  font-size: 43px;
+  margin-bottom: 20px;
+}
+
+.value-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  font-size: 22px;
+  margin-bottom: 13px;
+}
+
+.value-card p {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+/* CLOCK */
+
+.clock-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.clock-box {
+  max-width: 650px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.clock-label {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.clock-time {
+  color: var(--gold);
+  font: 700 clamp(45px, 10vw, 75px) 'Playfair Display', serif;
+  letter-spacing: 4px;
+  text-shadow: 0 0 30px #f5d58e55;
+}
+
+.clock-date {
+  color: var(--white);
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+/* QUOTE */
+
+.quote-box {
+  padding: 65px 25px;
+  text-align: center;
+  background: linear-gradient(145deg, #5b2033, #28111c);
+}
+
+.quote-box blockquote {
+  font: 500 clamp(25px, 5vw, 42px)/1.6 'Playfair Display', serif;
+  color: #fff0d1;
+}
+
+.quote-box p {
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin-top: 25px;
+  font-size: 12px;
+}
+
+/* EVENTS */
+
+.event-layout {
+  max-width: 850px;
+  margin: auto;
+}
+
+.form-card {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.form-title {
+  font: 600 25px 'Playfair Display', serif;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.field-label {
+  display: block;
+  color: var(--gold);
+  font-size: 13px;
+  margin: 15px 0 8px;
+}
+
+.field {
+  width: 100%;
+  background: #160b12;
+  border: 1px solid #b88b6255;
+  border-radius: 13px;
+  padding: 15px;
+  color: white;
+  outline: none;
+  font-size: 14px;
+  transition: .25s;
+}
+
+.field:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 15px #f5d58e20;
+}
+
+.field::placeholder {
+  color: #a88d95;
+}
+
+textarea.field {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.event-item {
+  padding: 24px;
+  margin: 16px 0;
+}
+
+.event-item h3 {
+  color: var(--gold);
+  font: 600 23px 'Playfair Display', serif;
+  margin-bottom: 13px;
+}
+
+.event-meta {
+  color: #e9bc7b;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.event-content {
+  color: #eedee0;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.empty {
+  text-align: center;
+  padding: 25px;
+  color: var(--muted);
+}
+
+/* COMMENTS */
+
+.comment-layout {
+  max-width: 850px;
+  margin: auto;
+}
+
+.comment-form {
+  padding: 30px;
+  margin-bottom: 35px;
+}
+
+.comment-item {
+  padding: 22px;
+  margin: 15px 0;
+}
+
+.comment-name {
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.comment-content {
+  color: #f2dfe3;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.comment-time {
+  color: #a99199;
+  font-size: 11px;
+  margin-top: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 45px 20px;
+  background: #10070c;
+  color: var(--muted);
+  line-height: 2.2;
+  border-top: 1px solid #f5d58e33;
+}
+
+footer strong {
+  color: var(--gold);
+}
+
+/* FLOWERS */
+
+.petal {
+  position: fixed;
+  top: -40px;
+  z-index: 10;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translate(var(--drift), 110vh) rotate(650deg);
+    opacity: 0;
+  }
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #080308dd;
+  backdrop-filter: blur(10px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  padding: 20px;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-card {
+  width: min(500px, 100%);
+  padding: 40px 25px;
+  text-align: center;
+  background: linear-gradient(145deg, #67253a, #250e19);
+  border: 1px solid var(--gold);
+  border-radius: 25px;
+  box-shadow: 0 30px 80px #000b;
+  animation: reveal .4s ease;
+}
+
+.modal-card h2 {
+  color: var(--gold);
+  font: 600 32px 'Playfair Display', serif;
+  margin: 18px 0;
+}
+
+.modal-card p {
+  line-height: 2;
+}
+
+/* END BUTTON */
+
+.end-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 40;
+  padding: 14px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--gold);
+  background: linear-gradient(135deg, #f5d58e, #c99b56);
+  color: #30121c;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 30px #0008;
+  transition: .3s;
+}
+
+.end-button:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* END CREDITS */
+
+.credits {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background:
+    radial-gradient(ellipse at center, #4b1c2e, #09050a 75%);
+  display: none;
+  overflow: hidden;
+}
+
+.credits.active {
+  display: block;
+}
+
+.credits-track {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 100%;
+  padding: 0 20px;
+  animation: creditsRoll 25s linear forwards;
+}
+
+@keyframes creditsRoll {
+  from { top: 100%; }
+  to { top: -125%; }
+}
+
+.credit-logo {
+  font: 700 clamp(35px, 8vw, 65px) 'Playfair Display', serif;
+  color: var(--gold);
+  text-shadow: 0 0 35px #f5d58e66;
+  margin-bottom: 35px;
+}
+
+.credit-block {
+  margin-bottom: 100px;
+}
+
+.credit-block h2 {
+  color: var(--gold);
+  font: 600 25px 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+.credit-block p {
+  color: #f7e8e6;
+  line-height: 2.2;
+  font-size: 16px;
+}
+
+.credit-heart {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.skip-credits {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 2;
+  padding: 12px 20px;
+  background: #ffffff15;
+  color: white;
+  border: 1px solid #ffffff55;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@media(max-width:600px) {
+  section { padding: 65px 0; }
+  .intro-card { padding: 30px 20px; }
+  .form-card, .comment-form { padding: 20px; }
+  .hero-label { letter-spacing: 3px; }
+  .hero-date { letter-spacing: 2px; }
+  .end-button { right: 13px; bottom: 13px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="ambient one"></div>
+<div class="ambient two"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-label">A SPECIAL DAY · VIETNAM</div>
+
+    <h1>
+      20
+      <span>THÁNG 11</span>
+    </h1>
+
+    <div class="hero-date">20.11.2026 · VIETNAMESE TEACHERS' DAY</div>
+
+    <div class="hero-line"></div>
+
+    <p class="hero-desc">
+      Có một nghề bụi phấn bám đầy tay,
+      người ta gọi đó là nghề cao quý nhất.
+      Cảm ơn những người lái đò thầm lặng
+      đã chắp cánh cho bao thế hệ học trò.
+    </p>
+
+    <div class="hero-actions">
+      <button class="gold-btn" onclick="openLetter()">
+        ✨ MỞ LỜI TRI ÂN
+      </button>
+
+      <button class="gold-btn outline-btn"
+        onclick="document.getElementById('comments').scrollIntoView()">
+        💌 GỬI LỜI CHÚC
+      </button>
+    </div>
+  </div>
+
+  <div class="scroll-hint">SCROLL TO EXPLORE ↓</div>
+</header>
+
+<!-- INTRO -->
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <h2>Lời Tri Ân</h2>
+      <p>Gửi đến những người thầy, người cô đáng kính</p>
+    </div>
+
+    <div class="panel intro-card">
+      <div class="big-flower">💐</div>
+      <h3>Kính gửi thầy cô!</h3>
+
+      <p>
+        Tháng 11 lại về, mang theo những cảm xúc đặc biệt
+        dành cho những người đã tận tụy dìu dắt chúng em
+        trên con đường tri thức.
+        <br><br>
+        Cảm ơn thầy cô vì những bài học quý giá,
+        những lời động viên và cả sự kiên nhẫn
+        trong từng ngày đứng lớp.
+        <br><br>
+        Kính chúc thầy cô luôn mạnh khỏe, hạnh phúc,
+        bình an và mãi giữ ngọn lửa đam mê với
+        sự nghiệp trồng người.
+        <br><br>
+        <strong style="color:var(--gold)">
+          Chúng em xin chân thành cảm ơn!
+        </strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <h2>Những Điều Đáng Quý</h2>
+      <p>Có những điều thời gian không thể xóa nhòa</p>
+    </div>
+
+    <div class="value-grid">
+      <div class="panel value-card">
+        <div class="value-icon">📚</div>
+        <h3>Tri Thức</h3>
+        <p>Thầy cô trao cho chúng em hành trang tri thức để tự tin bước vào tương lai.</p>
+      </div>
+
+      <div class="panel value-card">
+        <div class="value-icon">🌱</div>
+        <h3>Ươm Mầm</h3>
+        <p>Từng thế hệ học trò trưởng thành từ tình yêu và sự tận tụy của thầy cô.</p>
+      </div>
+
+      <div class="panel value-card">
+        <div class="value-icon">❤️</div>
+        <h3>Tình Thương</h3>
+        <p>Không chỉ dạy chữ, thầy cô còn dạy chúng em cách sống và làm người.</p>
+      </div>
+
+      <div class="panel value-card">
+        <div class="value-icon">🌟</div>
+        <h3>Ước Mơ</h3>
+        <p>Thầy cô là người truyền cảm hứng để chúng em dám ước mơ và chinh phục.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOCK -->
+<section class="clock-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Thời Gian Hiện Tại</h2>
+      <p>Mỗi khoảnh khắc đều là một kỷ niệm đẹp</p>
+    </div>
+
+    <div class="panel clock-box">
+      <div class="clock-label">VIETNAM · GMT+7</div>
+      <div class="clock-time" id="clockTime">00:00:00</div>
+      <div class="clock-date" id="clockDate">Đang tải thời gian...</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section>
+  <div class="container">
+    <div class="panel quote-box">
+      <blockquote>
+        "Một người thầy tốt giống như ngọn nến,
+        cháy hết mình để soi sáng con đường
+        cho những người khác."
+      </blockquote>
+
+      <p>HAPPY VIETNAMESE TEACHERS' DAY</p>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="container">
+    <div class="section-heading">
+      <h2>📢 Thông Báo Sự Kiện</h2>
+      <p>Cập nhật các hoạt động và sự kiện ngày/tháng</p>
+    </div>
+
+    <div class="event-layout">
+      <div class="panel form-card">
+        <h3 class="form-title">Đăng thông báo mới</h3>
+
+        <label class="field-label">Tên sự kiện</label>
+        <input class="field" id="eventTitle"
+          maxlength="100" placeholder="Ví dụ: Lễ kỷ niệm 20/11">
+
+        <label class="field-label">Ngày diễn ra</label>
+        <input class="field" id="eventDate" type="date">
+
+        <label class="field-label">Thời gian diễn ra</label>
+        <input class="field" id="eventHour" type="time">
+
+        <label class="field-label">Nội dung sự kiện</label>
+        <textarea class="field" id="eventContent"
+          maxlength="1000"
+          placeholder="Nhập nội dung thông báo..."></textarea>
+
+        <button class="gold-btn" onclick="addEvent()">
+          + ĐĂNG THÔNG BÁO
+        </button>
+      </div>
+
+      <div id="eventList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMENTS -->
+<section id="comments">
+  <div class="container">
+    <div class="section-heading">
+      <h2>💬 Góc Chia Sẻ</h2>
+      <p>Hãy gửi những lời chúc tốt đẹp nhất đến thầy cô!</p>
+    </div>
+
+    <div class="comment-layout">
+      <div class="panel comment-form">
+        <h3 class="form-title">Viết bình luận của bạn</h3>
+
+        <label class="field-label">Tên đệm *</label>
+        <input class="field" id="middleName"
+          maxlength="40" placeholder="Nhập tên đệm...">
+
+        <label class="field-label">Tên *</label>
+        <input class="field" id="lastName"
+          maxlength="40" placeholder="Nhập tên...">
+
+        <label class="field-label">Nội dung bình luận *</label>
+        <textarea class="field" id="commentText"
+          maxlength="500"
+          placeholder="Viết lời chúc hoặc bình luận..."></textarea>
+
+        <button class="gold-btn" onclick="addComment()">
+          ❤️ GỬI BÌNH LUẬN
+        </button>
+      </div>
+
+      <h3 class="form-title">Danh sách bình luận</h3>
+      <div id="commentList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>20 · 11 · 2026</strong>
+  <br>
+  Made with ❤️ for Teachers
+  <br>
+  Tri ân những người lái đò thầm lặng.
+  <br>
+  <span style="font-size:11px">A SPECIAL WEBSITE BY HQL_2311</span>
+</footer>
+
+<!-- LETTER MODAL -->
+<div class="modal" id="letter">
+  <div class="modal-card">
+    <div style="font-size:55px">🌹</div>
+    <h2>Happy Teachers' Day!</h2>
+
+    <p>
+      Nhân ngày Nhà giáo Việt Nam 20/11,
+      kính chúc thầy cô luôn vui vẻ,
+      mạnh khỏe và thành công.
+      <br><br>
+      Mong rằng mỗi ngày đến lớp đều là
+      một ngày tràn ngập niềm vui.
+      <br><br>
+      <strong style="color:var(--gold)">
+        Cảm ơn thầy cô vì tất cả!
+      </strong>
+    </p>
+
+    <button class="gold-btn" style="margin-top:25px"
+      onclick="closeLetter()">
+      ĐÓNG THIỆP ❤️
+    </button>
+  </div>
+</div>
+
+<!-- END BUTTON -->
+<button class="end-button" onclick="startCredits()">
+  ✦ KẾT THÚC
+</button>
+
+<!-- END CREDITS -->
+<div class="credits" id="credits">
+  <button class="skip-credits" onclick="closeCredits()">
+    Bỏ qua ✕
+  </button>
+
+  <div class="credits-track">
+    <div class="credit-block">
+      <div class="credit-heart">🌹</div>
+      <div class="credit-logo">20/11 PREMIUM</div>
+      <h2 style="color:white;font-family:'Playfair Display',serif">
+        TRI ÂN NGÀY NHÀ GIÁO VIỆT NAM
+      </h2>
+      <p>20 · 11 · 2026</p>
+    </div>
+
+    <div class="credit-block">
+      <h2>TÊN WEBSITE</h2>
+      <p>TRI ÂN THẦY CÔ</p>
+      <p>VIETNAMESE TEACHERS' DAY</p>
+      <p>20/11 PREMIUM EDITION</p>
+    </div>
+
+    <div class="credit-block">
+      <h2>TÁC GIẢ</h2>
+      <div class="credit-logo">HQL_2311</div>
+      <p>DESIGNED & DEVELOPED BY</p>
+    </div>
+
+    <div class="credit-block">
+      <h2>NGÔN NGỮ LẬP TRÌNH</h2>
+      <p>HTML5</p>
+      <p>CSS3</p>
+      <p>JAVASCRIPT</p>
+    </div>
+
+    <div class="credit-block">
+      <h2>CÔNG NGHỆ SỬ DỤNG</h2>
+      <p>HTML · CSS · JS</p>
+      <p>CSS ANIMATIONS</p>
+      <p>LOCAL STORAGE</p>
+      <p>RESPONSIVE WEB DESIGN</p>
+    </div>
+
+    <div class="credit-block">
+      <div class="credit-heart">❤️</div>
+      <div class="credit-logo">THANK YOU!</div>
+      <p>CẢM ƠN BẠN ĐÃ GHÉ THĂM</p>
+      <p>HAPPY VIETNAMESE TEACHERS' DAY</p>
+      <p>20 · 11 · 2026</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ======================================
+// CLOCK
+// ======================================
+
+function updateClock() {
+  const now = new Date();
+
+  document.getElementById('clockTime').textContent =
+    new Intl.DateTimeFormat('vi-VN', {
+      timeZone: 'Asia/Ho_Chi_Minh',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    }).format(now);
+
+  document.getElementById('clockDate').textContent =
+    new Intl.DateTimeFormat('vi-VN', {
+      timeZone: 'Asia/Ho_Chi_Minh',
+      weekday: 'long',
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric'
+    }).format(now);
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+
+
+// ======================================
+// SAFE LOCAL STORAGE
+// ======================================
+
+function loadData(key) {
+  try {
+    const value = JSON.parse(localStorage.getItem(key) || '[]');
+    return Array.isArray(value) ? value : [];
+  } catch {
+    return [];
+  }
+}
+
+
+// ======================================
+// EVENTS
+// ======================================
+
+let events = loadData('hql_20_11_events');
+
+function addEvent() {
+  const title = document.getElementById('eventTitle').value.trim();
+  const date = document.getElementById('eventDate').value;
+  const hour = document.getElementById('eventHour').value;
+  const content = document.getElementById('eventContent').value.trim();
+
+  if (!title || !date || !content) {
+    alert('Vui lòng nhập đầy đủ tên, ngày và nội dung sự kiện!');
+    return;
+  }
+
+  events.unshift({
+    id: Date.now(),
+    title,
+    date,
+    hour,
+    content,
+    created: new Date().toLocaleString('vi-VN')
+  });
+
+  localStorage.setItem('hql_20_11_events', JSON.stringify(events));
+
+  renderEvents();
+
+  document.getElementById('eventTitle').value = '';
+  document.getElementById('eventDate').value = '';
+  document.getElementById('eventHour').value = '';
+  document.getElementById('eventContent').value = '';
+
+  alert('Đăng thông báo thành công!');
+}
+
+function renderEvents() {
+  const list = document.getElementById('eventList');
+  list.replaceChildren();
+
+  if (!events.length) {
+    const empty = document.createElement('div');
+    empty.className = 'panel empty';
+    empty.textContent = '📭 Chưa có thông báo sự kiện.';
+    list.appendChild(empty);
+    return;
+  }
+
+  events.forEach(event => {
+    const item = document.createElement('div');
+    item.className = 'panel event-item';
+
+    const title = document.createElement('h3');
+    title.textContent = '📌 ' + event.title;
+
+    const meta = document.createElement('div');
+    meta.className = 'event-meta';
+    meta.textContent = '📅 ' + event.date +
+      (event.hour ? ' · 🕒 ' + event.hour : '');
+
+    const content = document.createElement('p');
+    content.className = 'event-content';
+    content.textContent = event.content;
+
+    item.append(title, meta, content);
+    list.appendChild(item);
+  });
+}
+
+renderEvents();
+
+
+// ======================================
+// COMMENTS
+// ======================================
+
+let comments = loadData('hql_20_11_comments');
+
+function addComment() {
+  const middle = document.getElementById('middleName').value.trim();
+  const last = document.getElementById('lastName').value.trim();
+  const content = document.getElementById('commentText').value.trim();
+
+  if (!middle || !last || !content) {
+    alert('Vui lòng nhập đầy đủ tên đệm, tên và bình luận!');
+    return;
+  }
+
+  if (middle.length > 40 || last.length > 40 || content.length > 500) {
+    alert('Nội dung vượt quá giới hạn!');
+    return;
+  }
+
+  comments.unshift({
+    id: Date.now(),
+    name: middle + ' ' + last,
+    content,
+    time: new Date().toLocaleString('vi-VN')
+  });
+
+  localStorage.setItem('hql_20_11_comments', JSON.stringify(comments));
+
+  renderComments();
+
+  document.getElementById('middleName').value = '';
+  document.getElementById('lastName').value = '';
+  document.getElementById('commentText').value = '';
+
+  alert('Gửi bình luận thành công ❤️');
+}
+
+function renderComments() {
+  const list = document.getElementById('commentList');
+  list.replaceChildren();
+
+  if (!comments.length) {
+    const empty = document.createElement('div');
+    empty.className = 'panel empty';
+    empty.textContent = '💬 Chưa có bình luận nào.';
+    list.appendChild(empty);
+    return;
+  }
+
+  comments.forEach(comment => {
+    const item = document.createElement('div');
+    item.className = 'panel comment-item';
+
+    const name = document.createElement('div');
+    name.className = 'comment-name';
+    name.textContent = '👤 ' + comment.name;
+
+    const content = document.createElement('p');
+    content.className = 'comment-content';
+    content.textContent = comment.content;
+
+    const time = document.createElement('div');
+    time.className = 'comment-time';
+    time.textContent = '🕒 ' + comment.time;
+
+    item.append(name, content, time);
+    list.appendChild(item);
+  });
+}
+
+renderComments();
+
+
+// ======================================
+// FLOWER ANIMATION
+// ======================================
+
+const flowers = ['🌸', '🌺', '🌹', '✨', '💮'];
+
+function createPetal() {
+  const petal = document.createElement('div');
+
+  petal.className = 'petal';
+  petal.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+
+  petal.style.left = Math.random() * 100 + 'vw';
+  petal.style.fontSize = (12 + Math.random() * 15) + 'px';
+  petal.style.animationDuration = (6 + Math.random() * 6) + 's';
+  petal.style.setProperty('--drift', (Math.random() * 150 - 75) + 'px');
+
+  document.body.appendChild(petal);
+
+  setTimeout(() => petal.remove(), 13000);
+}
+
+setInterval(createPetal, 650);
+
+
+// ======================================
+// LETTER
+// ======================================
+
+function openLetter() {
+  document.getElementById('letter').classList.add('active');
+}
+
+function closeLetter() {
+  document.getElementById('letter').classList.remove('active');
+}
+
+document.getElementById('letter').addEventListener('click', function(e) {
+  if (e.target === this) closeLetter();
+});
+
+
+// ======================================
+// END CREDITS
+// ======================================
+
+function startCredits() {
+  const credits = document.getElementById('credits');
+  const track = document.querySelector('.credits-track');
+
+  credits.classList.add('active');
+
+  // Khởi động lại hiệu ứng nếu người dùng chạy lại
+  track.style.animation = 'none';
+  void track.offsetHeight;
+  track.style.animation = 'creditsRoll 25s linear forwards';
+}
+
+function closeCredits() {
+  document.getElementById('credits').classList.remove('active');
+}
+</script>
+
+</body>
+</html>
